@@ -1,0 +1,59 @@
+{% if shipping_methods %}
+	<h4 class="text-bold">{{ text_shipping_method }}</h4>
+	<div class="section">
+	{% for shipping_method in shipping_methods %}
+		{% if not shipping_method.error %}
+		<ul>
+			{% for quote in shipping_method.quote %}
+			<li>
+				<label for="{{ quote.code }}">
+					{% if quote.code == code or not code %}
+					{% set code = quote.code %}
+					<input type="radio" name="shipping_method" value="{{ quote.code }}" checked="checked" id="{{ quote.code }}" class="with-gap">
+					{% else %}
+					<input type="radio" name="shipping_method" value="{{ quote.code }}" id="{{ quote.code }}" class="with-gap">
+					{% endif %}
+					<span>{{ quote.title }} – {{ quote.text }}</span>
+				</label>
+			</li>
+			{% endfor %}
+		</ul>
+		{% else %}
+		<script>M.toast({html: '<i class="material-icons left">warning</i>{{ shipping_method.error }}', classes: 'toast-warning'});</script>
+		{% endif %}
+	{% endfor %}
+	</div>
+{% endif %}
+<script>
+  function update(){
+      $.ajax({
+              url: 'index.php?route=checkout/return_cookie',
+              type:'POST',
+              success: function (res) {
+   				var store = JSON.parse(res);
+   				if(store['address']){
+   					document.getElementById("store").value = "超商代碼:"+store.route+"  |店名:"+store.name+"  |地址:"+store.address;
+   					clearInterval(id); 
+   				}
+              },
+              error: function (res) {
+                 console.log('wrong'); 
+              }
+       });
+  }
+     
+var id = setInterval('update()', 1000);  
+</script>
+<p><a target="_blank" onclick="setInterval('update()', 1000)"href="http://cvs.map.com.tw/paracvs.asp?cvsname=www.ec-order.com.tw&cvsid=AAABBB&cvstemp=https%3A%2F%2Fec-store.slat.org%3A8080%2Findex.php%3Froute%3Dcheckout%2Fselect_store">選取超商</a></p>
+<div class="section">
+	<strong>{{ text_comments }}</strong>
+	<div class="input-field">
+		<i class="material-icons prefix">message</i>
+		<textarea id="store"name="comment" class="materialize-textarea" required></textarea>
+	</div>
+</div>
+<div class="flex-reverse">
+	<button onclick="ap()" type="button" value="{{ button_continue }}" id="button-shipping-method" class="btn waves-effect waves-light red">{{ button_continue }}</button>
+</div>
+<script>{% if error_warning %}M.toast({html: '<i class="material-icons left">warning</i>{{ error_warning }}', classes: 'toast-warning'});{% endif %}</script>
+

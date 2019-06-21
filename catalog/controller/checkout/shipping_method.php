@@ -117,7 +117,7 @@ class ControllerCheckoutShippingMethod extends Controller {
 		}
 
 		if ($this->request->post['shipping_method']=="flat2.flat2") {
-			if (strlen($this->request->post['comment'])<=24) {
+			if (strlen($this->request->post['comment'])<=70) {
 				$json['error']['warning'] = $this->language->get('error_comment');
 			}
 		} 

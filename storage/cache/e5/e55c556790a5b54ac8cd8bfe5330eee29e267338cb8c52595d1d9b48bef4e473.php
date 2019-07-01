@@ -1,6 +1,6 @@
 <?php
 
-/* __string_template__8aa042f602588cf64973d18f6ee9c8519a16bc1bf3d8988660e583c2fd0574b0 */
+/* __string_template__6f1238e58051addb352bec68895a05c09b779236d3aa6661c172844f732e5c03 */
 class __TwigTemplate_6aecc8e0cf6002699fd1f0a18d7d1466ce5f799ccff274c8094c97ada461f37d extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -87,7 +87,7 @@ select{
 
             ";
                 // line 21
-                $this->loadTemplate("default/template/extension/payment/ecpaypayment_input.twig", "__string_template__8aa042f602588cf64973d18f6ee9c8519a16bc1bf3d8988660e583c2fd0574b0", 21)->display($context);
+                $this->loadTemplate("default/template/extension/payment/ecpaypayment_input.twig", "__string_template__6f1238e58051addb352bec68895a05c09b779236d3aa6661c172844f732e5c03", 21)->display($context);
                 // line 22
                 echo "            
 \t\t\t</label>
@@ -170,7 +170,7 @@ select{
 
     public function getTemplateName()
     {
-        return "__string_template__8aa042f602588cf64973d18f6ee9c8519a16bc1bf3d8988660e583c2fd0574b0";
+        return "__string_template__6f1238e58051addb352bec68895a05c09b779236d3aa6661c172844f732e5c03";
     }
 
     public function isTraitable()

@@ -1,7 +1,7 @@
 <?php
 
-/* catalog/attribute_list.twig */
-class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52bb35d extends Twig_Template
+/* customer/custom_field_list.twig */
+class __TwigTemplate_4d1881927ef4ce1a2dba530dacd03fd7c9e710e8b6d43c4e0e678d71b8b8eaa5 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -33,7 +33,7 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
         echo (isset($context["button_delete"]) ? $context["button_delete"] : null);
         echo "\" class=\"btn btn-danger\" onclick=\"confirm('";
         echo (isset($context["text_confirm"]) ? $context["text_confirm"] : null);
-        echo "') ? \$('#form-attribute').submit() : false;\"><i class=\"fa fa-trash-o\"></i></button>
+        echo "') ? \$('#form-custom-field').submit() : false;\"><i class=\"fa fa-trash-o\"></i></button>
       </div>
       <h1>";
         // line 8
@@ -95,7 +95,7 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
         <form action=\"";
         // line 32
         echo (isset($context["delete"]) ? $context["delete"] : null);
-        echo "\" method=\"post\" enctype=\"multipart/form-data\" id=\"form-attribute\">
+        echo "\" method=\"post\" enctype=\"multipart/form-data\" id=\"form-custom-field\">
           <div class=\"table-responsive\">
             <table class=\"table table-bordered table-hover\">
               <thead>
@@ -103,7 +103,7 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
                   <td style=\"width: 1px;\" class=\"text-center\"><input type=\"checkbox\" onclick=\"\$('input[name*=\\'selected\\']').prop('checked', this.checked);\" /></td>
                   <td class=\"text-left\">";
         // line 38
-        if (((isset($context["sort"]) ? $context["sort"] : null) == "ad.name")) {
+        if (((isset($context["sort"]) ? $context["sort"] : null) == "cfd.name")) {
             // line 39
             echo "                    <a href=\"";
             echo (isset($context["sort_name"]) ? $context["sort_name"] : null);
@@ -126,45 +126,45 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
         echo "</td>
                   <td class=\"text-left\">";
         // line 43
-        if (((isset($context["sort"]) ? $context["sort"] : null) == "attribute_group")) {
+        if (((isset($context["sort"]) ? $context["sort"] : null) == "cf.location")) {
             // line 44
             echo "                    <a href=\"";
-            echo (isset($context["sort_attribute_group"]) ? $context["sort_attribute_group"] : null);
+            echo (isset($context["sort_location"]) ? $context["sort_location"] : null);
             echo "\" class=\"";
             echo twig_lower_filter($this->env, (isset($context["order"]) ? $context["order"] : null));
             echo "\">";
-            echo (isset($context["column_attribute_group"]) ? $context["column_attribute_group"] : null);
+            echo (isset($context["column_location"]) ? $context["column_location"] : null);
             echo "</a>
                     ";
         } else {
             // line 46
             echo "                    <a href=\"";
-            echo (isset($context["sort_attribute_group"]) ? $context["sort_attribute_group"] : null);
+            echo (isset($context["sort_location"]) ? $context["sort_location"] : null);
             echo "\">";
-            echo (isset($context["column_attribute_group"]) ? $context["column_attribute_group"] : null);
+            echo (isset($context["column_location"]) ? $context["column_location"] : null);
             echo "</a>
                     ";
         }
         // line 47
         echo "</td>
-                  <td class=\"text-right\">";
+                  <td class=\"text-left\">";
         // line 48
-        if (((isset($context["sort"]) ? $context["sort"] : null) == "a.sort_order")) {
+        if (((isset($context["sort"]) ? $context["sort"] : null) == "cf.type")) {
             // line 49
             echo "                    <a href=\"";
-            echo (isset($context["sort_sort_order"]) ? $context["sort_sort_order"] : null);
+            echo (isset($context["sort_type"]) ? $context["sort_type"] : null);
             echo "\" class=\"";
             echo twig_lower_filter($this->env, (isset($context["order"]) ? $context["order"] : null));
             echo "\">";
-            echo (isset($context["column_sort_order"]) ? $context["column_sort_order"] : null);
+            echo (isset($context["column_type"]) ? $context["column_type"] : null);
             echo "</a>
                     ";
         } else {
             // line 51
             echo "                    <a href=\"";
-            echo (isset($context["sort_sort_order"]) ? $context["sort_sort_order"] : null);
+            echo (isset($context["sort_type"]) ? $context["sort_type"] : null);
             echo "\">";
-            echo (isset($context["column_sort_order"]) ? $context["column_sort_order"] : null);
+            echo (isset($context["column_type"]) ? $context["column_type"] : null);
             echo "</a>
                     ";
         }
@@ -172,53 +172,80 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
         echo "</td>
                   <td class=\"text-right\">";
         // line 53
+        if (((isset($context["sort"]) ? $context["sort"] : null) == "cf.sort_order")) {
+            // line 54
+            echo "                    <a href=\"";
+            echo (isset($context["sort_sort_order"]) ? $context["sort_sort_order"] : null);
+            echo "\" class=\"";
+            echo twig_lower_filter($this->env, (isset($context["order"]) ? $context["order"] : null));
+            echo "\">";
+            echo (isset($context["column_sort_order"]) ? $context["column_sort_order"] : null);
+            echo "</a>
+                    ";
+        } else {
+            // line 56
+            echo "                    <a href=\"";
+            echo (isset($context["sort_sort_order"]) ? $context["sort_sort_order"] : null);
+            echo "\">";
+            echo (isset($context["column_sort_order"]) ? $context["column_sort_order"] : null);
+            echo "</a>
+                    ";
+        }
+        // line 57
+        echo "</td>
+                  <td class=\"text-right\">";
+        // line 58
         echo (isset($context["column_action"]) ? $context["column_action"] : null);
         echo "</td>
                 </tr>
               </thead>
               <tbody>
                 ";
-        // line 57
-        if ((isset($context["attributes"]) ? $context["attributes"] : null)) {
-            // line 58
+        // line 62
+        if ((isset($context["custom_fields"]) ? $context["custom_fields"] : null)) {
+            // line 63
             echo "                ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["attributes"]) ? $context["attributes"] : null));
-            foreach ($context['_seq'] as $context["_key"] => $context["attribute"]) {
-                // line 59
+            $context['_seq'] = twig_ensure_traversable((isset($context["custom_fields"]) ? $context["custom_fields"] : null));
+            foreach ($context['_seq'] as $context["_key"] => $context["custom_field"]) {
+                // line 64
                 echo "                <tr>
                   <td class=\"text-center\">";
-                // line 60
-                if (twig_in_filter($this->getAttribute($context["attribute"], "attribute_id", array()), (isset($context["selected"]) ? $context["selected"] : null))) {
-                    // line 61
+                // line 65
+                if (twig_in_filter($this->getAttribute($context["custom_field"], "custom_field_id", array()), (isset($context["selected"]) ? $context["selected"] : null))) {
+                    // line 66
                     echo "                    <input type=\"checkbox\" name=\"selected[]\" value=\"";
-                    echo $this->getAttribute($context["attribute"], "attribute_id", array());
+                    echo $this->getAttribute($context["custom_field"], "custom_field_id", array());
                     echo "\" checked=\"checked\" />
                     ";
                 } else {
-                    // line 63
+                    // line 68
                     echo "                    <input type=\"checkbox\" name=\"selected[]\" value=\"";
-                    echo $this->getAttribute($context["attribute"], "attribute_id", array());
+                    echo $this->getAttribute($context["custom_field"], "custom_field_id", array());
                     echo "\" />
                     ";
                 }
-                // line 64
+                // line 69
                 echo "</td>
                   <td class=\"text-left\">";
-                // line 65
-                echo $this->getAttribute($context["attribute"], "name", array());
+                // line 70
+                echo $this->getAttribute($context["custom_field"], "name", array());
                 echo "</td>
                   <td class=\"text-left\">";
-                // line 66
-                echo $this->getAttribute($context["attribute"], "attribute_group", array());
+                // line 71
+                echo $this->getAttribute($context["custom_field"], "location", array());
+                echo "</td>
+                  <td class=\"text-left\">";
+                // line 72
+                echo $this->getAttribute($context["custom_field"], "type", array());
                 echo "</td>
                   <td class=\"text-right\">";
-                // line 67
-                echo $this->getAttribute($context["attribute"], "sort_order", array());
+                // line 73
+                echo $this->getAttribute($context["custom_field"], "sort_order", array());
                 echo "</td>
                   <td class=\"text-right\"><a href=\"";
-                // line 68
-                echo $this->getAttribute($context["attribute"], "edit", array());
+                // line 74
+                echo $this->getAttribute($context["custom_field"], "edit", array());
                 echo "\" data-toggle=\"tooltip\" title=\"";
                 echo (isset($context["button_edit"]) ? $context["button_edit"] : null);
                 echo "\" class=\"btn btn-primary\"><i class=\"fa fa-pencil\"></i></a></td>
@@ -226,32 +253,32 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
                 ";
             }
             $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['attribute'], $context['_parent'], $context['loop']);
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['custom_field'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 71
+            // line 77
             echo "                ";
         } else {
-            // line 72
+            // line 78
             echo "                <tr>
-                  <td class=\"text-center\" colspan=\"5\">";
-            // line 73
+                  <td class=\"text-center\" colspan=\"6\">";
+            // line 79
             echo (isset($context["text_no_results"]) ? $context["text_no_results"] : null);
             echo "</td>
                 </tr>
                 ";
         }
-        // line 76
+        // line 82
         echo "              </tbody>
             </table>
           </div>
         </form>
         <div class=\"row\">
           <div class=\"col-sm-6 text-left\">";
-        // line 81
+        // line 87
         echo (isset($context["pagination"]) ? $context["pagination"] : null);
         echo "</div>
           <div class=\"col-sm-6 text-right\">";
-        // line 82
+        // line 88
         echo (isset($context["results"]) ? $context["results"] : null);
         echo "</div>
         </div>
@@ -260,15 +287,13 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
   </div>
 </div>
 ";
-        // line 88
+        // line 94
         echo (isset($context["footer"]) ? $context["footer"] : null);
-        echo "
-";
     }
 
     public function getTemplateName()
     {
-        return "catalog/attribute_list.twig";
+        return "customer/custom_field_list.twig";
     }
 
     public function isTraitable()
@@ -278,7 +303,7 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
 
     public function getDebugInfo()
     {
-        return array (  264 => 88,  255 => 82,  251 => 81,  244 => 76,  238 => 73,  235 => 72,  232 => 71,  221 => 68,  217 => 67,  213 => 66,  209 => 65,  206 => 64,  200 => 63,  194 => 61,  192 => 60,  189 => 59,  184 => 58,  182 => 57,  175 => 53,  172 => 52,  164 => 51,  154 => 49,  152 => 48,  149 => 47,  141 => 46,  131 => 44,  129 => 43,  126 => 42,  118 => 41,  108 => 39,  106 => 38,  97 => 32,  91 => 29,  87 => 27,  79 => 23,  76 => 22,  68 => 18,  66 => 17,  60 => 13,  49 => 11,  45 => 10,  40 => 8,  33 => 6,  27 => 5,  19 => 1,);
+        return array (  291 => 94,  282 => 88,  278 => 87,  271 => 82,  265 => 79,  262 => 78,  259 => 77,  248 => 74,  244 => 73,  240 => 72,  236 => 71,  232 => 70,  229 => 69,  223 => 68,  217 => 66,  215 => 65,  212 => 64,  207 => 63,  205 => 62,  198 => 58,  195 => 57,  187 => 56,  177 => 54,  175 => 53,  172 => 52,  164 => 51,  154 => 49,  152 => 48,  149 => 47,  141 => 46,  131 => 44,  129 => 43,  126 => 42,  118 => 41,  108 => 39,  106 => 38,  97 => 32,  91 => 29,  87 => 27,  79 => 23,  76 => 22,  68 => 18,  66 => 17,  60 => 13,  49 => 11,  45 => 10,  40 => 8,  33 => 6,  27 => 5,  19 => 1,);
     }
 }
 /* {{ header }}{{ column_left }}*/
@@ -286,7 +311,7 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
 /*   <div class="page-header">*/
 /*     <div class="container-fluid">*/
 /*       <div class="pull-right"><a href="{{ add }}" data-toggle="tooltip" title="{{ button_add }}" class="btn btn-primary"><i class="fa fa-plus"></i></a>*/
-/*         <button type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-attribute').submit() : false;"><i class="fa fa-trash-o"></i></button>*/
+/*         <button type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-custom-field').submit() : false;"><i class="fa fa-trash-o"></i></button>*/
 /*       </div>*/
 /*       <h1>{{ heading_title }}</h1>*/
 /*       <ul class="breadcrumb">*/
@@ -312,23 +337,28 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
 /*         <h3 class="panel-title"><i class="fa fa-list"></i> {{ text_list }}</h3>*/
 /*       </div>*/
 /*       <div class="panel-body">*/
-/*         <form action="{{ delete }}" method="post" enctype="multipart/form-data" id="form-attribute">*/
+/*         <form action="{{ delete }}" method="post" enctype="multipart/form-data" id="form-custom-field">*/
 /*           <div class="table-responsive">*/
 /*             <table class="table table-bordered table-hover">*/
 /*               <thead>*/
 /*                 <tr>*/
 /*                   <td style="width: 1px;" class="text-center"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" /></td>*/
-/*                   <td class="text-left">{% if sort == 'ad.name' %}*/
+/*                   <td class="text-left">{% if sort == 'cfd.name' %}*/
 /*                     <a href="{{ sort_name }}" class="{{ order|lower }}">{{ column_name }}</a>*/
 /*                     {% else %}*/
 /*                     <a href="{{ sort_name }}">{{ column_name }}</a>*/
 /*                     {% endif %}</td>*/
-/*                   <td class="text-left">{% if sort == 'attribute_group' %}*/
-/*                     <a href="{{ sort_attribute_group }}" class="{{ order|lower }}">{{ column_attribute_group }}</a>*/
+/*                   <td class="text-left">{% if sort == 'cf.location' %}*/
+/*                     <a href="{{ sort_location }}" class="{{ order|lower }}">{{ column_location }}</a>*/
 /*                     {% else %}*/
-/*                     <a href="{{ sort_attribute_group }}">{{ column_attribute_group }}</a>*/
+/*                     <a href="{{ sort_location }}">{{ column_location }}</a>*/
 /*                     {% endif %}</td>*/
-/*                   <td class="text-right">{% if sort == 'a.sort_order' %}*/
+/*                   <td class="text-left">{% if sort == 'cf.type' %}*/
+/*                     <a href="{{ sort_type }}" class="{{ order|lower }}">{{ column_type }}</a>*/
+/*                     {% else %}*/
+/*                     <a href="{{ sort_type }}">{{ column_type }}</a>*/
+/*                     {% endif %}</td>*/
+/*                   <td class="text-right">{% if sort == 'cf.sort_order' %}*/
 /*                     <a href="{{ sort_sort_order }}" class="{{ order|lower }}">{{ column_sort_order }}</a>*/
 /*                     {% else %}*/
 /*                     <a href="{{ sort_sort_order }}">{{ column_sort_order }}</a>*/
@@ -337,23 +367,24 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
 /*                 </tr>*/
 /*               </thead>*/
 /*               <tbody>*/
-/*                 {% if attributes %}*/
-/*                 {% for attribute in attributes %}*/
+/*                 {% if custom_fields %}*/
+/*                 {% for custom_field in custom_fields %}*/
 /*                 <tr>*/
-/*                   <td class="text-center">{% if attribute.attribute_id in selected %}*/
-/*                     <input type="checkbox" name="selected[]" value="{{ attribute.attribute_id }}" checked="checked" />*/
+/*                   <td class="text-center">{% if custom_field.custom_field_id in selected %}*/
+/*                     <input type="checkbox" name="selected[]" value="{{ custom_field.custom_field_id }}" checked="checked" />*/
 /*                     {% else %}*/
-/*                     <input type="checkbox" name="selected[]" value="{{ attribute.attribute_id }}" />*/
+/*                     <input type="checkbox" name="selected[]" value="{{ custom_field.custom_field_id }}" />*/
 /*                     {% endif %}</td>*/
-/*                   <td class="text-left">{{ attribute.name }}</td>*/
-/*                   <td class="text-left">{{ attribute.attribute_group }}</td>*/
-/*                   <td class="text-right">{{ attribute.sort_order }}</td>*/
-/*                   <td class="text-right"><a href="{{ attribute.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>*/
+/*                   <td class="text-left">{{ custom_field.name }}</td>*/
+/*                   <td class="text-left">{{ custom_field.location }}</td>*/
+/*                   <td class="text-left">{{ custom_field.type }}</td>*/
+/*                   <td class="text-right">{{ custom_field.sort_order }}</td>*/
+/*                   <td class="text-right"><a href="{{ custom_field.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>*/
 /*                 </tr>*/
 /*                 {% endfor %}*/
 /*                 {% else %}*/
 /*                 <tr>*/
-/*                   <td class="text-center" colspan="5">{{ text_no_results }}</td>*/
+/*                   <td class="text-center" colspan="6">{{ text_no_results }}</td>*/
 /*                 </tr>*/
 /*                 {% endif %}*/
 /*               </tbody>*/
@@ -369,4 +400,3 @@ class __TwigTemplate_8e51d173cfcd2d8027e0db955fd36c782ea56396b77dab73ac9d4e9ba52
 /*   </div>*/
 /* </div>*/
 /* {{ footer }}*/
-/* */

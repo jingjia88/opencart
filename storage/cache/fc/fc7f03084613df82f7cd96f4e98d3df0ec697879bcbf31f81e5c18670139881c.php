@@ -1,6 +1,6 @@
 <?php
 
-/* __string_template__7646cadda95c7aa1547fd9bdce911a0db984793d41bfbd64719a63b58f703a70 */
+/* __string_template__40b3ef84723aaf47428e78dde6724a5b37be1cfe31a936baee777b9237759bd1 */
 class __TwigTemplate_522b5887606b10b3b53c90ee9de3ab67c28b8015f85e575f14f9752230ac6714 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -159,7 +159,7 @@ var id = setInterval('update()', 1000);
 
     public function getTemplateName()
     {
-        return "__string_template__7646cadda95c7aa1547fd9bdce911a0db984793d41bfbd64719a63b58f703a70";
+        return "__string_template__40b3ef84723aaf47428e78dde6724a5b37be1cfe31a936baee777b9237759bd1";
     }
 
     public function isTraitable()
